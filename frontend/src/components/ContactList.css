@@ -1,0 +1,27 @@
+.contact-list {
+  margin-top: 30px;
+}
+
+.list-title {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contacts-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .contacts-grid {
+    gap: 10px;
+  }
+}
