@@ -23,15 +23,13 @@ mongoose.connect(process.env.MONGODB_URI, {
 // API Routes
 app.use('/api/contacts', contactRoutes);
 
-// ---------------- Serve Frontend ----------------
-// Serve static files from backend/dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// For any route that isn’t /api, serve index.html
+
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
-// -------------------------------------------------
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
